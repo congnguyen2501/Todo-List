@@ -48,15 +48,13 @@ const TodoForm = () => {
   };
 
   const handleUpdate = (updatedJob) => {
-    // Cập nhật công việc đã chỉnh sửa vào danh sách công việc
+
     let updatedJobs = [...jobs];
     updatedJobs[editIndex].task = updatedJob;
 
-    // Lưu danh sách công việc mới vào local storage và cập nhật state
     localStorage.setItem("jobs", JSON.stringify(updatedJobs));
     setJobs(updatedJobs);
 
-    // Đóng form chỉnh sửa
     handleCloseExit();
   };
 
