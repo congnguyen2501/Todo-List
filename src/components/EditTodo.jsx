@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { IoCloseSharp } from "react-icons/io5";
-const EditTodo = ({ close, job, updateJob }) => { // Sử dụng props job và updateJob
-  const [edit, setEdit] = useState(job); // Sử dụng giá trị job để khởi tạo state edit
+const EditTodo = ({ close, job, updateJob }) => { 
+  const [edit, setEdit] = useState(job);
 
   const handleUpdate = () => {
     updateJob(edit); // Gọi hàm cập nhật công việc với giá trị mới
